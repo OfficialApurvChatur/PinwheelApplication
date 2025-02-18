@@ -7,7 +7,7 @@ const getSocket = () => useContext(SocketContext)
 
 const SocketProvider = ({ children }) => {
   const socket = useMemo(() => {
-    return io(import.meta.env.VITE_ENVIRONMENT === "Production" ? "https://soup-pinwheel-backend.onrender.com" : "http://localhost:8000", { withCredentials: true })
+    return io(import.meta.env.VITE_ENVIRONMENT === "Production" ? "https://backend-for-pinwheel-application.onrender.com" : "http://localhost:8000", { withCredentials: true })
   }, []);
 
   return (
